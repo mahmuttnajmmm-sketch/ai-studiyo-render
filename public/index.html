@@ -32,7 +32,7 @@
 <style>
 
 <style>
-.multi-layout{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:16px}.multi-results{display:grid;gap:12px}.provider-card{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--surface)}.provider-card h3{margin:0 0 8px}.provider-card.inactive{opacity:.7}.provider-card pre{white-space:pre-wrap;font:inherit;margin:0;line-height:1.55}.provider-status{font-size:12px;color:var(--muted)}@media(max-width:760px){.multi-layout{grid-template-columns:1fr}}.generator-layout{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:16px}.generator-canvas{display:block;width:100%;aspect-ratio:16/9;background:#0b1020;border:1px solid var(--line);border-radius:14px;touch-action:none}.generator-controls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}.generator-controls .btn{min-width:90px}.generator-status{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px}.generator-help{color:var(--muted);font-size:13px;line-height:1.5}.site-notice{max-width:980px;margin:10px auto 0;padding:10px 14px;border:1px solid var(--accent);background:var(--accentSoft);border-radius:12px;color:var(--ink)}.generator-chip{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px;text-align:left;cursor:pointer}.generator-chip.active{border-color:var(--accent);background:var(--accentSoft)}@media(max-width:760px){.generator-layout{grid-template-columns:1fr}}
+.generator-layout{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:16px}.generator-canvas{display:block;width:100%;aspect-ratio:16/9;background:#0b1020;border:1px solid var(--line);border-radius:14px;touch-action:none}.generator-controls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}.generator-controls .btn{min-width:90px}.generator-status{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px}.generator-help{color:var(--muted);font-size:13px;line-height:1.5}.site-notice{max-width:980px;margin:10px auto 0;padding:10px 14px;border:1px solid var(--accent);background:var(--accentSoft);border-radius:12px;color:var(--ink)}.generator-chip{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px;text-align:left;cursor:pointer}.generator-chip.active{border-color:var(--accent);background:var(--accentSoft)}@media(max-width:760px){.generator-layout{grid-template-columns:1fr}}.video-choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.video-choice{min-height:180px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.video-choice:hover{border-color:var(--accent);transform:translateY(-2px)}.video-choice .choice-icon{font-size:28px;color:var(--accent)}.video-choice strong{font:800 20px var(--display)}.video-choice span{color:var(--muted);font-size:13.5px}.video-editor{display:grid;grid-template-columns:minmax(250px,360px) minmax(0,1fr);gap:16px}.video-preview{width:100%;max-height:55vh;background:#050914;border:1px solid var(--line);border-radius:14px}.video-notice{border:1px solid var(--line);background:var(--surface2);border-radius:12px;padding:11px 13px;color:var(--muted);font-size:12.5px}.video-result{width:100%;max-height:50vh;background:#050914;border-radius:12px}@media(max-width:760px){.video-editor{grid-template-columns:1fr}.video-preview{max-height:35vh}}
 </style>
 <style>
 #auth-gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;padding:20px}#auth-gate[hidden]{display:none}.auth-card{width:min(420px,100%);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}.auth-card h1{font:800 25px var(--display);margin:0 0 8px}.auth-card p{color:var(--muted);margin:0 0 18px}.auth-card form{display:flex;gap:8px;flex-direction:column}.auth-card input{font-size:16px}.auth-card .btn{margin-top:4px}.auth-err{min-height:20px;color:var(--danger);font-size:13px}
@@ -43,7 +43,7 @@
 <div class="app" id="app">
 <nav class="rail" aria-label="Modüller">
 <svg class="brand" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="12" stroke="currentColor" stroke-width="3"/><path d="M14 33l4-11 8 8 8-16" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="14" r="3" fill="currentColor"/></svg>
-<button class="nav active" data-view="prompt"><span>✎</span><b>Prompt</b></button><button class="nav" data-view="chat"><span>▤</span><b>Asistan</b></button><button class="nav" data-view="sheet"><span>▦</span><b>Tablo</b></button><button class="nav" data-view="lab"><span>▣</span><b>Ödev</b></button><button class="nav" data-view="generator"><span>✦</span><b>Oyun</b></button><button class="nav" data-view="multi"><span>◈</span><b>Multi-AI</b></button>
+<button class="nav active" data-view="prompt"><span>✎</span><b>Prompt</b></button><button class="nav" data-view="chat"><span>▤</span><b>Asistan</b></button><button class="nav" data-view="sheet"><span>▦</span><b>Tablo</b></button><button class="nav" data-view="lab"><span>▣</span><b>Ödev</b></button><button class="nav" data-view="generator"><span>✦</span><b>Oyun</b></button><button class="nav" data-view="video"><span>▶</span><b>Video</b></button>
 </nav>
 <header class="topbar"><div class="tl"><button class="icon-btn" id="btn-menu" title="Menü" aria-label="Menüyü aç"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="crumb"><b id="view-title">Prompt Atölyesi</b><span id="view-sub">Fikri yaz, prompt hazır olsun</span></div></div><div class="top-actions"><button class="pill warn" id="ai-pill"><i></i><b id="ai-pill-text">Yapay zekâ kapalı</b></button><button class="icon-btn" id="btn-theme" title="Temayı değiştir">◐</button><button class="icon-btn" id="btn-settings" title="Ayarlar">⚙</button></div></header>
 <main class="stage" id="stage">
@@ -59,14 +59,35 @@
 </div></section>
 <section class="view fill" id="view-chat"><div class="chat"><div class="msgs" id="msgs" aria-live="polite"></div><div class="chips" id="csug"></div><form class="composer" id="cform"><textarea id="cin" rows="2" placeholder="Bir şey sor, kod yaz, hata ayıkla... (Enter gönderir, Shift + Enter yeni satır)"></textarea><div class="row" id="cpp-chat-tools" hidden><span class="hint">C++ ayarları</span><select id="cpp-chat-standard" aria-label="C++ standardı"><option value="C++17">C++17</option><option value="C++20" selected>C++20</option><option value="C++23">C++23</option></select><select id="cpp-chat-compiler" aria-label="Derleyici"><option value="GCC / g++">GCC / g++</option><option value="Clang / clang++">Clang / clang++</option><option value="MSVC / cl">MSVC / cl</option></select></div><div class="row long-tools"><label class="hint"><input type="checkbox" id="long-mode"> Çok uzun metin modu</label><input type="number" id="long-count" min="1000" max="100000" value="10000" style="width:125px" aria-label="Hedef kelime sayısı"><span class="hint">1.000–100.000 kelime</span></div><div class="c-row"><div class="row"><select id="cmode"><option value="genel">Genel</option><option value="kod">Kod uzmanı</option><option value="cpp">C++ uzmanı</option><option value="yaratici">Yaratıcı</option><option value="ogretmen">Öğretmen</option><option value="gorsel">Görsel prompt yazarı</option></select><button type="button" class="btn sm" id="cpaste">Panodan yapıştır</button><button type="button" class="btn sm" id="cclear">Sohbeti temizle</button></div><div class="row"><span class="msg" id="cstatus"></span><button type="button" class="btn danger" id="cstop" hidden>Durdur</button><button class="btn primary" id="csend">Gönder</button></div></div></form><section class="card" id="long-result" hidden style="margin-top:12px"><div class="row" style="justify-content:space-between"><b>Uzun metin sonucu</b><div class="row"><span class="msg" id="long-meta"></span><button class="btn sm" id="long-copy" type="button">Kopyala</button><button class="btn sm" id="long-download" type="button">TXT indir</button></div></div><textarea id="long-out" rows="14" readonly style="margin-top:10px"></textarea></section></div></section>
 <section class="view fill" id="view-sheet"><div class="sheet-tools"><button class="tbtn" id="x-bold" title="Kalın"><b>K</b></button><button class="tbtn" id="x-italic" title="İtalik"><i>T</i></button><span class="separator"></span><button class="tbtn" id="x-add-row">+ Satır</button><button class="tbtn" id="x-add-col">+ Sütun</button><button class="tbtn" id="x-sort">A→Z sırala</button><input class="sheet-search" id="x-search" placeholder="Tabloda ara..." aria-label="Tabloda ara"><span class="separator"></span><button class="tbtn" id="x-budget">Bütçe</button><button class="tbtn" id="x-sales">Satış</button><button class="tbtn" id="x-csv">CSV kopyala</button><button class="tbtn" id="x-download">CSV indir</button><button class="tbtn" id="x-import">CSV içe aktar</button><input id="x-file" type="file" accept=".csv,text/csv" hidden><button class="tbtn" id="x-ai">AI ile tablo kur</button><button class="tbtn" id="x-clear">Temizle</button></div><div class="row" id="xl-ai" hidden><input id="x-ai-in" placeholder="Örn: 5 ürünlük satış ve kâr tablosu kur"><button class="btn primary sm" id="x-ai-go">Oluştur</button><span id="x-ai-msg" class="msg"></span></div><div class="sheet-wrap"><table class="sheet" id="xl-table"></table></div><div class="row" style="justify-content:space-between"><span class="msg" id="x-stats">Hazır</span><button class="btn sm" id="x-undo">Geri al</button></div></section>
-<section class="view" id="view-multi"><div class="inner"><div><p class="eyebrow">Multi-AI Koordinatörü</p><h1 class="hero">Üç modeli <mark>aynı anda</mark> kullan.</h1><p class="lede">Aynı isteği ChatGPT, Claude ve Gemini’ye gönder. Yanıt vermeyen model otomatik olarak INACTIVE görünür; diğerleri çalışmaya devam eder.</p></div><div class="multi-layout"><section class="card"><h2 class="sec">Görev gönder</h2><div class="field" style="margin-top:10px"><label for="multi-query">İstek</label><textarea id="multi-query" rows="8" placeholder="Örn: Bu özelliği üç farklı açıdan analiz edin..."></textarea></div><div class="field"><label>Modeller</label><div class="chips" id="multi-providers"><button class="chip on" type="button" data-provider="openai">ChatGPT</button><button class="chip on" type="button" data-provider="anthropic">Claude</button><button class="chip on" type="button" data-provider="gemini">Gemini</button></div></div><div class="row"><button class="btn primary" id="multi-send" type="button">Üçüne gönder</button><button class="btn" id="multi-refresh" type="button">Durumu yenile</button></div><p class="msg" id="multi-msg"></p><p class="generator-help">Anahtarlar sunucuda tutulur; tarayıcıya gönderilmez. Kullanım ücretleri sağlayıcıların kendi API hesabına aittir.</p></section><section class="card"><div class="row" style="justify-content:space-between"><h2 class="sec">Yanıtlar</h2><span class="hint" id="multi-summary">Hazır</span></div><div class="multi-results" id="multi-results"><div class="project-empty">Bir istek gönderince model yanıtları burada görünecek.</div></div></section></div></div></section>
 <section class="view" id="view-generator"><div class="inner"><div><p class="eyebrow">Oyun Oluşturucu</p><h1 class="hero">Fikrini <mark>oynanabilir</mark> oyuna dönüştür.</h1><p class="lede">Fikrini yaz, AI mini oyunun temasını ve hedefini hazırlasın; sonra doğrudan burada oyna ve geliştir.</p></div><div class="generator-layout"><section class="card"><h2 class="sec">Yeni oyun</h2><div class="field" style="margin-top:10px"><label for="generator-idea">Oyun fikrin</label><textarea id="generator-idea" rows="6" placeholder="Örn: Karanlık bir uzay istasyonunda oksijen toplayıp çıkışa ulaş..."></textarea></div><div class="field"><label for="generator-genre">Tür</label><select id="generator-genre"><option value="korku">Korku</option><option value="macera">Macera</option><option value="yaris">Yarış</option><option value="hayatta-kalma">Hayatta kalma</option><option value="bulmaca">Bulmaca</option></select></div><div class="generator-controls"><button class="btn primary" id="generator-create" type="button">Oyun oluştur</button><button class="btn" id="generator-regenerate" type="button">Yeniden oluştur</button></div><p class="msg" id="generator-msg"></p><p class="generator-help">Oluşan oyun bu cihazda saklanır. AI hata verirse seçilen türe uygun oynanabilir bir prototip yine açılır.</p></section><section class="card"><div class="row" style="justify-content:space-between;align-items:start"><div><h2 id="generator-title">Henüz oyun yok</h2><span class="hint" id="generator-meta">Bir fikir yazıp oluştur.</span></div><button class="btn primary sm" id="generator-improve" type="button">Geliştir</button></div><canvas id="generator-canvas" class="generator-canvas" width="800" height="450" aria-label="Oluşturulan oyun"></canvas><div class="generator-status"><span class="game-stat" id="generator-status">Başlamak için oluştur</span><span class="game-stat" id="generator-score">Skor: 0 · Rekor: 0</span></div><div class="generator-controls"><button class="btn primary" id="generator-start" type="button">Başlat</button><button class="btn" id="generator-left" type="button">◀ Sol</button><button class="btn" id="generator-action" type="button">Aksiyon</button><button class="btn" id="generator-right" type="button">Sağ ▶</button></div><p class="generator-help" id="generator-goal">Amaç: —</p></section></div></div></section>
+<section class="view" id="view-video"><style>
+#view-video [hidden]{display:none!important}
+.ve-choices{display:grid;grid-template-columns:1fr 1fr;gap:14px}.ve-choice{border:1px solid var(--line);background:var(--surface2);border-radius:16px;padding:20px;text-align:left;cursor:pointer;color:var(--ink);font:inherit;display:flex;flex-direction:column;gap:6px}.ve-choice:hover{border-color:var(--accent);background:var(--accentSoft)}.ve-choice b{font:800 18px var(--display)}.ve-choice span{color:var(--muted);font-size:13px}.ve-choice i{font-style:normal;font-size:26px}
+.ve-video{width:100%;max-height:52vh;background:#000;border-radius:14px;display:block}.ve-range{display:grid;gap:10px}.ve-range label{display:flex;justify-content:space-between;gap:10px;font-weight:600}.ve-range input[type=range]{width:100%}
+.ve-segs{display:grid;gap:6px;margin:0;padding:0;list-style:none}.ve-segs li{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:6px 10px;background:var(--surface2);font:13px var(--mono)}.ve-bar{height:8px;background:var(--surface2);border:1px solid var(--line);border-radius:99px;overflow:hidden}.ve-bar>div{height:100%;width:0;background:var(--accent);transition:width .15s}
+@media(max-width:640px){.ve-choices{grid-template-columns:1fr}}
+</style><div class="inner">
+<div><p class="eyebrow">Video Editörü</p><h1 class="hero">Videonu <mark>kes</mark>, indir.</h1><p class="lede">Her şey tarayıcında çalışır: videon sunucuya yüklenmez, ücret yoktur.</p></div>
+<div class="card" id="ve-choose"><h2 class="sec">Nasıl düzenlemek istersin?</h2><div class="ve-choices" style="margin-top:12px"><button class="ve-choice" id="ve-pick-manual" type="button"><i>✂</i><b>Kendim düzenle</b><span>Video seç, başlangıç ve bitişi belirle, kes ve indir.</span></button><button class="ve-choice" id="ve-pick-ai" type="button"><i>✦</i><b>Yapay zekâ düzenlesin</b><span>Ses düzeyine göre sessiz kısımları at veya öne çıkan anları seç. Cihazında, ücretsiz çalışır.</span></button></div></div>
+<div id="ve-editor" hidden style="display:flex;flex-direction:column;gap:16px">
+<section class="card"><div class="row" style="justify-content:space-between"><h2 class="sec" id="ve-mode-label">Kendim düzenle</h2><button class="btn sm" id="ve-back" type="button">← Mod seç</button></div>
+<div class="field" style="margin-top:10px"><label for="ve-file">Video dosyası</label><input id="ve-file" type="file" accept="video/*,.mp4,.webm,.mov,.m4v,.mkv"><span class="hint" id="ve-fname">Henüz video seçilmedi.</span></div>
+<video id="ve-video" class="ve-video" controls playsinline preload="metadata" hidden></video></section>
+<section class="card" id="ve-manual"><h2 class="sec">Kesilecek aralık</h2><div class="ve-range" style="margin-top:10px"><label>Başlangıç <span id="ve-start-t">00:00.0</span></label><input id="ve-start" type="range" min="0" max="1" step="0.05" value="0" disabled><label>Bitiş <span id="ve-end-t">00:00.0</span></label><input id="ve-end" type="range" min="0" max="1" step="0.05" value="1" disabled><div class="row"><button class="btn sm" id="ve-setstart" type="button">Başlangıç = şimdiki an</button><button class="btn sm" id="ve-setend" type="button">Bitiş = şimdiki an</button><span class="hint" id="ve-len">Süre: —</span></div></div></section>
+<section class="card" id="ve-ai"><h2 class="sec">Otomatik düzenleme</h2><p class="generator-help">Ücretsiz ve cihaz içi otomatik işlemdir; hiçbir servise veri gitmez. Gerçek bir dil modeli değildir: görüntüyü veya konuşmayı anlamaz, yalnızca ses düzeyini ölçüp bölümleri seçer.</p>
+<div class="row" style="margin-top:10px"><button class="btn" id="ve-ai-silence" type="button">Sessiz kısımları at</button><label class="hint" for="ve-sens">Hassasiyet</label><select id="ve-sens" style="width:auto;flex:none"><option value="0.02">Düşük</option><option value="0.04" selected>Orta</option><option value="0.08">Yüksek</option></select></div>
+<div class="row" style="margin-top:10px"><input id="ve-target" type="number" min="3" max="3600" value="30" style="width:90px" aria-label="Özet süresi (saniye)"><span class="hint">saniyelik</span><button class="btn" id="ve-ai-highlight" type="button">Sesi en yüksek anlardan özet çıkar</button></div>
+<div class="field" style="margin-top:10px"><label for="ve-cmd">Ya da komut yaz</label><div class="row"><input id="ve-cmd" type="text" style="flex:1;min-width:200px" placeholder="Örn: sessiz kısımları at · 20 saniyelik özet · ilk 15 saniye · son 10 saniye · 5-12 arası"><button class="btn" id="ve-cmd-run" type="button">Uygula</button></div></div>
+<h3 style="margin:14px 0 6px;font-size:14px">Tutulacak bölümler <span class="hint" id="ve-segtotal"></span></h3><ul class="ve-segs" id="ve-seglist"></ul></section>
+<section class="card"><div class="row"><button class="btn" id="ve-preview" type="button">▶ Önizle</button><button class="btn primary" id="ve-export" type="button">Kes ve indir</button><button class="btn" id="ve-stop" type="button" hidden>Durdur</button></div><div class="ve-bar" style="margin-top:12px"><div id="ve-prog"></div></div><p class="msg" id="ve-msg" aria-live="polite"></p><p class="generator-help">İndirme, kesiti gerçek zamanlı yeniden kaydederek üretir; 30 sn’lik kesit yaklaşık 30 sn sürer. İşlem sırasında sekmeyi açık tut. Çıktı genelde .webm olur.</p></section>
+</div></div></section>
+
 <section class="view" id="view-lab"><div class="inner"><div><p class="eyebrow">Ödev &amp; Sınav</p><h1 class="hero">Ödevi <mark>anla</mark>, sınava hazırlan.</h1><p class="lede">Soruyu yaz veya fotoğrafını ekle. Sınıfını ve dersini seçerek yardım al.</p></div><div class="chips"><button class="chip on" id="od-tab-hw">Ödev yap</button><button class="chip" id="od-tab-ex">Sınav araştır</button></div><div id="od-hw"><form class="card" id="hw-form" style="display:flex;flex-direction:column;gap:12px"><div class="grid"><div class="field"><label for="hw-grade">Sınıf</label><select id="hw-grade"></select></div><div class="field"><label for="hw-course">Ders</label><select id="hw-course"></select></div><div class="field"><label for="hw-style">Yardım şekli</label><select id="hw-style"><option value="adim">Adım adım anlat</option><option value="ipucu">İpucu ver</option><option value="yaz">Ödevi yaz</option><option value="kontrol">Cevabımı kontrol et</option></select></div></div><div class="field"><label for="hw-q">Sorun / ödevin</label><textarea id="hw-q" rows="4" placeholder="Soruyu buraya yaz..."></textarea></div><div class="row"><input type="file" id="hw-file" accept="image/*" multiple><button class="btn primary" id="hw-go">Yardım al</button><button type="button" class="btn danger" id="hw-stop" hidden>Durdur</button><span id="hw-msg" class="msg"></span></div></form><section class="card" id="hw-out" hidden><div class="row" style="justify-content:space-between"><b>Cevap</b><button class="btn sm" id="hw-copy">Kopyala</button></div><div id="hw-thread" class="md"></div><form id="hw-follow-form" class="row"><input id="hw-follow" placeholder="Devam sorusu" style="flex:1"><button class="btn primary">Sor</button></form></section></div><div id="od-ex" hidden><form class="card" id="ex-form" style="display:flex;flex-direction:column;gap:12px"><div class="grid"><div class="field"><label for="ex-grade">Sınıf</label><select id="ex-grade"></select></div><div class="field"><label for="ex-course">Ders</label><select id="ex-course"></select></div><div class="field"><label for="ex-term">Dönem</label><select id="ex-term"><option>1</option><option>2</option></select></div><div class="field"><label for="ex-type">Sınav türü</label><select id="ex-type"><option>Yazılı</option><option>Sözlü</option><option>Konuşma sınavı</option><option>Test / deneme</option></select></div></div><div class="field"><label for="ex-note">Öğretmenin verdiği konular (isteğe bağlı)</label><textarea id="ex-note" rows="2"></textarea></div><button class="btn primary">Araştır ve hazırla</button></form><div id="ex-res" class="md card" hidden style="margin-top:12px"></div></div></div></section>
 </main></div>
-<div class="overlay" id="settings" hidden><div class="modal" role="dialog" aria-modal="true"><div class="row" style="justify-content:space-between"><h2>Ayarlar</h2><button class="icon-btn" id="set-close">✕</button></div><p class="msg" id="set-status"></p><div class="sub"><span class="lbl">Yapay zekâ</span><p class="hint">Bu atölye Manus, ChatGPT, Claude ve Gemini taslaklarını karşılaştırıp ortak cevap üretir. Sağlayıcı kredisi veya anahtarı yoksa o sağlayıcı INACTIVE görünür.</p></div><div class="sub"><span class="lbl">Tema</span><div class="chips" id="theme-chips"><button class="chip" data-t="light">Açık</button><button class="chip" data-t="dark">Koyu</button></div></div><div class="sub"><span class="lbl">Veriler</span><div class="row"><button class="btn sm" id="clr-chat">Sohbeti sil</button><button class="btn sm" id="clr-hist">Prompt geçmişini sil</button><button class="btn sm danger" id="clr-all">Tüm yerel verileri sil</button></div></div></div></div>
+<div class="overlay" id="settings" hidden><div class="modal" role="dialog" aria-modal="true"><div class="row" style="justify-content:space-between"><h2>Ayarlar</h2><button class="icon-btn" id="set-close">✕</button></div><p class="msg" id="set-status"></p><div class="sub"><span class="lbl">Yapay zekâ</span><p class="hint">Video Editörü cihazında çalışır; seçtiğin video sunucuya veya yapay zekâ servisine gönderilmez.</p></div><div class="sub"><span class="lbl">Tema</span><div class="chips" id="theme-chips"><button class="chip" data-t="light">Açık</button><button class="chip" data-t="dark">Koyu</button></div></div><div class="sub"><span class="lbl">Veriler</span><div class="row"><button class="btn sm" id="clr-chat">Sohbeti sil</button><button class="btn sm" id="clr-hist">Prompt geçmişini sil</button><button class="btn sm danger" id="clr-all">Tüm yerel verileri sil</button></div></div></div></div>
 <div class="drawer-wrap" id="drawer" hidden><div class="drawer-bg" id="drawer-bg"></div><aside class="drawer" aria-label="Menü"><h3><span id="drawer-title">Menü</span> <button class="icon-btn" id="drawer-close" aria-label="Kapat">✕</button></h3>
 <hr>
-<button class="dit" data-go="prompt"><span>✎</span>Prompt Atölyesi</button><button class="dit" data-go="chat"><span>▤</span>Asistan</button><div class="drawer-history" id="drawer-chat-history" hidden><div class="row" style="justify-content:space-between;padding:4px 8px"><b>Sohbet geçmişi</b><button class="btn sm" id="drawer-chat-new" type="button">Yeni</button></div><input id="chat-search" type="text" placeholder="Sohbetlerde ara..." aria-label="Sohbet geçmişinde ara" style="margin:4px 8px;width:calc(100% - 16px)"><ul class="hist" id="drawer-history-list"></ul></div><button class="dit" data-go="sheet"><span>▦</span>Akıllı Tablo</button><button class="dit" data-go="lab"><span>▣</span>Ödev &amp; Sınav</button><button class="dit" data-go="generator"><span>✦</span>Oyun Oluşturucu</button><button class="dit" data-go="multi"><span>◈</span>Multi-AI Koordinatörü</button></aside></div>
+<button class="dit" data-go="prompt"><span>✎</span>Prompt Atölyesi</button><button class="dit" data-go="chat"><span>▤</span>Asistan</button><div class="drawer-history" id="drawer-chat-history" hidden><div class="row" style="justify-content:space-between;padding:4px 8px"><b>Sohbet geçmişi</b><button class="btn sm" id="drawer-chat-new" type="button">Yeni</button></div><input id="chat-search" type="text" placeholder="Sohbetlerde ara..." aria-label="Sohbet geçmişinde ara" style="margin:4px 8px;width:calc(100% - 16px)"><ul class="hist" id="drawer-history-list"></ul></div><button class="dit" data-go="sheet"><span>▦</span>Akıllı Tablo</button><button class="dit" data-go="lab"><span>▣</span>Ödev &amp; Sınav</button><button class="dit" data-go="generator"><span>✦</span>Oyun Oluşturucu</button><button class="dit" data-go="video"><span>▶</span>Video Editörü</button></aside></div>
 <div id="toasts" aria-live="polite"></div>
 <script>
 'use strict';
@@ -79,8 +100,8 @@ async function copyText(t){try{await navigator.clipboard.writeText(t);toast('Kop
 function countWords(t){return(String(t).match(/\S+/g)||[]).length}
 
 /* Eksik bırakılmış gezinme sistemi tamamlandı. */
-const VIEWS={prompt:['Prompt Atölyesi','Fikri yaz, prompt hazır olsun'],chat:['Asistan','Sor, üret, birlikte çöz'],sheet:['Akıllı Tablo','Verilerini düzenle'],lab:['Ödev & Sınav','Öğren ve hazırlan'],generator:['Oyun Oluşturucu','Fikrinden mini oyun üret'],multi:['Multi-AI Koordinatörü','Modelleri birlikte kullan']};let currentView='prompt';
-function show(name){if(!VIEWS[name])name='prompt';currentView=name;$$('.view').forEach(v=>v.classList.toggle('on',v.id==='view-'+name));$$('.nav').forEach(b=>b.classList.toggle('active',b.dataset.view===name));$('#view-title').textContent=VIEWS[name][0];$('#view-sub').textContent=VIEWS[name][1];$$('.dit').forEach(b=>b.classList.toggle('active',b.dataset.go===name));if(typeof renderChatHistory==='function')renderChatHistory();if(name==='multi'&&typeof refreshMultiStatus==='function')refreshMultiStatus()}
+const VIEWS={prompt:['Prompt Atölyesi','Fikri yaz, prompt hazır olsun'],chat:['Asistan','Sor, üret, birlikte çöz'],sheet:['Akıllı Tablo','Verilerini düzenle'],lab:['Ödev & Sınav','Öğren ve hazırlan'],generator:['Oyun Oluşturucu','Fikrinden mini oyun üret'],video:['Video Editörü','Kendin kes veya cihazında otomatik düzenle']};let currentView='prompt';
+function show(name){if(!VIEWS[name])name='prompt';currentView=name;$$('.view').forEach(v=>v.classList.toggle('on',v.id==='view-'+name));$$('.nav').forEach(b=>b.classList.toggle('active',b.dataset.view===name));$('#view-title').textContent=VIEWS[name][0];$('#view-sub').textContent=VIEWS[name][1];$$('.dit').forEach(b=>b.classList.toggle('active',b.dataset.go===name));if(typeof renderChatHistory==='function')renderChatHistory();if(name==='video'&&typeof setVideoMode==='function')setVideoMode('')}
 $$('.nav').forEach(b=>b.addEventListener('click',()=>show(b.dataset.view)));const drawer=$('#drawer');function openDrawer(){drawer.hidden=false;renderChatHistory()}function closeDrawer(){drawer.hidden=true}$('#btn-menu').addEventListener('click',openDrawer);$('#drawer-close').addEventListener('click',closeDrawer);$('#drawer-bg').addEventListener('click',closeDrawer);$$('.dit').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.go);closeDrawer()}));
 
 /* Güvenli, temel Markdown gösterimi. HTML cevapları doğrudan sayfaya basılmaz. */
@@ -89,7 +110,7 @@ function mdRender(text,host){host.textContent='';const lines=String(text||'').re
 
 /* Yapay zekâ: Manus'un yönetilen AI servisi. API anahtarı istemez. */
 const AI={sample:true};AI.available=()=>true;
-function setPill(){const p=$('#ai-pill'),t=$('#ai-pill-text');p.classList.remove('ok','warn');p.classList.add('ok');t.textContent='4 AI ortak modu'}
+function setPill(){const p=$('#ai-pill'),t=$('#ai-pill-text');p.classList.remove('ok','warn');p.classList.add('ok');t.textContent='Yapay zekâ hazır'}
 async function initAI(){setPill()}
 function errText(e){const c=e?.code||'',m=e?.message||'';if(e?.name==='AbortError'||c==='aborted')return'İstek durduruldu.';if(c==='rate_limited')return'AI kullanım sınırı doldu. Biraz bekleyip tekrar dene.';if(e instanceof TypeError)return'Bağlantı kesildi. İnternetini kontrol edip tekrar dene.';if(e?.status>=500)return'AI servisi geçici olarak yanıt vermedi. Otomatik denemeler başarısız oldu; tekrar deneyebilirsin.';return m||'Bir hata oluştu. Tekrar dene.'}
 
@@ -97,7 +118,7 @@ function withSystem(input,sys){if(!sys)return input;const pre='[Talimat]\n'+sys+
 async function ask(input,o={}){const inp=withSystem(input,o.system);const messages=typeof inp==='string'?[{role:'user',content:inp}]:inp.map(m=>({role:m.role,content:m.content}));const body={messages};if(o.json)body.json=true;let lastError;for(let attempt=0;attempt<3;attempt++){try{const r=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:o.signal});const data=await r.json().catch(()=>({}));if(!r.ok){const e=new Error(data.error||`AI servisi yanıt vermedi (${r.status}).`);e.status=r.status;throw e}return o.json?data.value:{text:data.text||'',collaboration:data.collaboration}}catch(e){lastError=e;if(e?.name==='AbortError'||e?.code==='aborted')throw e;if(attempt<2){await new Promise(resolve=>setTimeout(resolve,700*(attempt+1)));continue}throw lastError}}throw lastError||new Error('AI servisine bağlanılamadı.')}
 
 /* Ayarlar */
-function openSettings(){ $('#settings').hidden=false;$('#set-status').textContent='Manus + ChatGPT + Claude + Gemini ortak cevap modu etkin. Kredisi veya anahtarı olmayan sağlayıcı INACTIVE görünür.' }
+function openSettings(){ $('#settings').hidden=false;$('#set-status').textContent='Diğer uygulama özelliklerinde tek yapılandırılmış AI servisi kullanılır. Video düzenlemede dış servise istek gönderilmez.' }
 $('#btn-settings').addEventListener('click',openSettings);$('#ai-pill').addEventListener('click',openSettings);$('#set-close').addEventListener('click',()=>$('#settings').hidden=true);$('#settings').addEventListener('click',e=>{if(e.target===$('#settings'))$('#settings').hidden=true});
 
 $('#theme-chips').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(!b)return;document.documentElement.dataset.theme=b.dataset.t;store.set('atolye.theme',b.dataset.t);$$('#theme-chips .chip').forEach(x=>x.classList.toggle('on',x===b))});$('#btn-theme').addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;store.set('atolye.theme',t);$$('#theme-chips [data-t]').forEach(b=>b.classList.toggle('on',b.dataset.t===t))});document.documentElement.dataset.theme=store.get('atolye.theme','light');
@@ -176,18 +197,198 @@ $('#generator-create').addEventListener('click',()=>createGeneratedGame('create'
 
 
 /* Yönetim ayarlarını uygula */
-async function loadSiteSettings(){try{const r=await fetch('/api/site-settings');if(!r.ok)return;const d=await r.json();const map={prompt:'prompt',chat:'chat',sheet:'sheet',lab:'lab',generator:'generator',multi:'multi'};Object.entries(map).forEach(([key,module])=>{$$('.nav[data-view="'+key+'"]').forEach(b=>b.hidden=d.modules?.[module]===false);$$('.dit[data-go="'+key+'"]').forEach(b=>b.hidden=d.modules?.[module]===false)});if(d.announcement){$('#site-notice').textContent=d.announcement;$('#site-notice').hidden=false}}catch{}}
+async function loadSiteSettings(){try{const r=await fetch('/api/site-settings');if(!r.ok)return;const d=await r.json();const map={prompt:'prompt',chat:'chat',sheet:'sheet',lab:'lab',generator:'generator',video:'video'};Object.entries(map).forEach(([key,module])=>{$$('.nav[data-view="'+key+'"]').forEach(b=>b.hidden=d.modules?.[module]===false);$$('.dit[data-go="'+key+'"]').forEach(b=>b.hidden=d.modules?.[module]===false)});if(d.announcement){$('#site-notice').textContent=d.announcement;$('#site-notice').hidden=false}}catch{}}
 loadSiteSettings();
 
-/* Multi-AI Koordinatörü */
-const multiLabels={openai:'ChatGPT / OpenAI',anthropic:'Claude / Anthropic',gemini:'Gemini / Google'};
-function selectedMultiProviders(){return $$('#multi-providers .chip.on').map(b=>b.dataset.provider)}
-function renderMultiResults(results=[]){const box=$('#multi-results');box.textContent='';results.forEach(item=>{const card=document.createElement('article');card.className='provider-card '+(item.status==='ACTIVE'?'':'inactive');const h=document.createElement('h3');h.textContent=item.label||multiLabels[item.id]||item.id;const status=document.createElement('div');status.className='provider-status';status.textContent=item.status==='ACTIVE'?'ACTIVE':'INACTIVE — '+(item.error||'Yanıt alınamadı');card.append(h,status);if(item.text){const pre=document.createElement('pre');pre.textContent=item.text;card.append(pre)}box.append(card)});if(!results.length){const e=document.createElement('div');e.className='project-empty';e.textContent='Bir istek gönderince model yanıtları burada görünecek.';box.append(e)}}
-async function refreshMultiStatus(){try{const r=await fetch('/api/multi-ai/status');const d=await r.json();if(!r.ok)throw new Error(d.error);const summary=Object.values(d.providers).map(p=>`${p.label}: ${p.status}`).join(' · ');$('#multi-summary').textContent=summary;$('#multi-msg').textContent=''}catch(e){$('#multi-summary').textContent='Durum alınamadı';$('#multi-msg').textContent=e.message||'Bağlantı hatası'}}
-$$('#multi-providers .chip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('on')}));
-$('#multi-refresh').addEventListener('click',refreshMultiStatus);
-$('#multi-send').addEventListener('click',async()=>{const message=$('#multi-query').value.trim(),providers=selectedMultiProviders();if(!message){$('#multi-msg').textContent='Önce bir istek yaz.';return}if(!providers.length){$('#multi-msg').textContent='En az bir model seç.';return}$('#multi-send').disabled=true;$('#multi-msg').textContent='Modeller yanıtlıyor...';try{const r=await fetch('/api/multi-ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message,providers})});const d=await r.json();if(!r.ok)throw new Error(d.error||'İstek başarısız.');renderMultiResults(d.results);const active=d.results.filter(x=>x.status==='ACTIVE').length;$('#multi-summary').textContent=`${active}/${d.results.length} model aktif`;$('#multi-msg').textContent='Tamamlandı.'}catch(e){$('#multi-msg').textContent=e.message||'Bağlantı hatası'}finally{$('#multi-send').disabled=false}});
-refreshMultiStatus();
+/* Video Editörü (tamamen tarayıcıda, ücretsiz) */
+const ve={file:null,url:'',dur:0,segs:[],busy:false,cancel:false,audio:null,mode:'manual',peaks:null};
+const veV=$('#ve-video');
+function veFmt(s){s=Math.max(0,s||0);const m=Math.floor(s/60),x=s-m*60;return String(m).padStart(2,'0')+':'+x.toFixed(1).padStart(4,'0')}
+function veMsg(t,err){const e=$('#ve-msg');e.textContent=t||'';e.style.color=err?'var(--danger)':''}
+function veLeave(){if(!ve.busy)veV.pause()}
+function veMode(m){ve.mode=m;$('#ve-choose').hidden=true;$('#ve-editor').hidden=false;$('#ve-manual').hidden=m!=='manual';$('#ve-ai').hidden=m!=='ai';$('#ve-mode-label').textContent=m==='ai'?'Yapay zekâ düzenlesin':'Kendim düzenle';$('#ve-export').textContent=m==='ai'?'Düzenle ve indir':'Kes ve indir';veMsg('')}
+$('#ve-pick-manual').addEventListener('click',()=>veMode('manual'));
+$('#ve-pick-ai').addEventListener('click',()=>veMode('ai'));
+$('#ve-back').addEventListener('click',()=>{ve.cancel=true;veV.pause();$('#ve-editor').hidden=true;$('#ve-choose').hidden=false});
+function veSetBusy(b){ve.busy=b;['#ve-export','#ve-preview','#ve-file','#ve-ai-silence','#ve-ai-highlight','#ve-cmd-run'].forEach(s=>{const e=$(s);if(e)e.disabled=b});$('#ve-stop').hidden=!b}
+$('#ve-file').addEventListener('change',e=>veLoad(e.target.files[0]));
+function veLoad(f){
+  if(!f)return;
+  if(!/^video\//.test(f.type)&&!/\.(mp4|webm|mov|m4v|mkv|ogv)$/i.test(f.name)){veMsg('Lütfen bir video dosyası seç.',true);return}
+  if(ve.url)URL.revokeObjectURL(ve.url);
+  ve.file=f;ve.url=URL.createObjectURL(f);ve.peaks=null;ve.segs=[];veRenderSegs();
+  veV.hidden=false;veV.src=ve.url;$('#ve-fname').textContent=f.name+' · '+(f.size/1048576).toFixed(1)+' MB';veMsg('Video yükleniyor...');
+}
+veV.addEventListener('error',()=>{veMsg('Bu video tarayıcıda açılamadı. MP4 (H.264) veya WebM dene.',true)});
+veV.addEventListener('loadedmetadata',()=>{
+  const init=()=>{
+    ve.dur=veV.duration;const st=$('#ve-start'),en=$('#ve-end');
+    [st,en].forEach(r=>{r.max=ve.dur;r.disabled=false});st.value=0;en.value=ve.dur;veRange();
+    veMsg('Video hazır ('+veFmt(ve.dur)+').');
+  };
+  if(!isFinite(veV.duration)){const h=()=>{veV.removeEventListener('durationchange',h);veV.currentTime=0;init()};veV.addEventListener('durationchange',h);veV.currentTime=1e101}else init();
+});
+function veRange(src){
+  const st=$('#ve-start'),en=$('#ve-end');let a=+st.value,b=+en.value;
+  if(src==='start'&&a>b-0.1){a=Math.max(0,b-0.1);st.value=a}
+  if(src==='end'&&b<a+0.1){b=Math.min(ve.dur,a+0.1);en.value=b}
+  $('#ve-start-t').textContent=veFmt(a);$('#ve-end-t').textContent=veFmt(b);$('#ve-len').textContent='Süre: '+veFmt(b-a);
+}
+$('#ve-start').addEventListener('input',()=>{veRange('start');veV.currentTime=+$('#ve-start').value});
+$('#ve-end').addEventListener('input',()=>{veRange('end');veV.currentTime=+$('#ve-end').value});
+$('#ve-setstart').addEventListener('click',()=>{if(!ve.dur)return;$('#ve-start').value=Math.min(veV.currentTime,ve.dur);veRange('start')});
+$('#ve-setend').addEventListener('click',()=>{if(!ve.dur)return;$('#ve-end').value=Math.min(veV.currentTime,ve.dur);veRange('end')});
+function veSegsNow(){return ve.mode==='manual'?[[+$('#ve-start').value,+$('#ve-end').value]]:ve.segs}
+function veRenderSegs(){
+  const ul=$('#ve-seglist');ul.textContent='';
+  ve.segs.forEach((sg,i)=>{const li=document.createElement('li');const t=document.createElement('span');t.textContent=veFmt(sg[0])+' → '+veFmt(sg[1])+'  ('+(sg[1]-sg[0]).toFixed(1)+' sn)';const x=document.createElement('button');x.className='btn sm';x.type='button';x.textContent='×';x.setAttribute('aria-label','Bölümü çıkar');x.addEventListener('click',()=>{ve.segs.splice(i,1);veRenderSegs()});li.append(t,x);ul.append(li)});
+  const tot=ve.segs.reduce((a,s)=>a+s[1]-s[0],0);$('#ve-segtotal').textContent=ve.segs.length?'· toplam '+tot.toFixed(1)+' sn':'· henüz yok';
+}
+function veGraph(){
+  if(!ve.audio){const AC=window.AudioContext||window.webkitAudioContext;const ctx=new AC();const src=ctx.createMediaElementSource(veV);const dest=ctx.createMediaStreamDestination();src.connect(ctx.destination);ve.audio={ctx,src,dest}}
+  if(ve.audio.ctx.state==='suspended')ve.audio.ctx.resume();return ve.audio;
+}
+function veSeek(t){return new Promise(r=>{if(Math.abs(veV.currentTime-t)<0.01)return r();const h=()=>{veV.removeEventListener('seeked',h);r()};veV.addEventListener('seeked',h);veV.currentTime=t})}
+async function vePlay(segs,rec,label){
+  const total=segs.reduce((a,s)=>a+s[1]-s[0],0);let done=0;
+  for(const [s,e] of segs){
+    if(ve.cancel)break;
+    if(rec&&rec.state==='recording')rec.pause();
+    veV.pause();await veSeek(s);
+    if(rec&&rec.state==='paused')rec.resume();
+    await veV.play();
+    await new Promise(res=>{const iv=setInterval(()=>{
+      const cur=Math.min(Math.max(veV.currentTime,s),e);
+      $('#ve-prog').style.width=Math.min(100,(done+cur-s)/total*100)+'%';
+      if(ve.cancel||veV.ended||veV.currentTime>=e-0.03){clearInterval(iv);res()}
+    },40)});
+    done+=e-s;
+  }
+  veV.pause();
+}
+function veCheck(segs){
+  if(!ve.file){veMsg('Önce bir video seç.',true);return null}
+  const ok=segs.filter(s=>s[1]-s[0]>=0.1);
+  if(!ok.length){veMsg(ve.mode==='ai'?'Önce bir otomatik düzenleme uygula.':'Aralık çok kısa.',true);return null}
+  return ok;
+}
+$('#ve-preview').addEventListener('click',async()=>{
+  const segs=veCheck(veSegsNow());if(!segs)return;
+  try{veGraph()}catch{}
+  ve.cancel=false;veSetBusy(true);veMsg('Önizleniyor...');
+  try{await vePlay(segs)}catch(e){veMsg('Önizleme hatası: '+(e.message||e),true);veSetBusy(false);return}
+  veSetBusy(false);$('#ve-prog').style.width='0';veMsg(ve.cancel?'Durduruldu.':'Önizleme bitti.');
+});
+$('#ve-stop').addEventListener('click',()=>{ve.cancel=true});
+$('#ve-export').addEventListener('click',async()=>{
+  const segs=veCheck(veSegsNow());if(!segs)return;
+  const cap=veV.captureStream||veV.mozCaptureStream;
+  if(!window.MediaRecorder||!cap){veMsg('Bu tarayıcı video kesmeyi desteklemiyor. Güncel Chrome, Edge veya Firefox kullan.',true);return}
+  ve.cancel=false;veSetBusy(true);veMsg('Kesiliyor... sekmeyi açık tut.');$('#ve-prog').style.width='0';
+  let a,rec,chunks=[],mime='';
+  try{
+    a=veGraph();a.src.disconnect();a.src.connect(a.dest);
+    const vs=cap.call(veV);
+    const stream=new MediaStream([...vs.getVideoTracks(),...a.dest.stream.getAudioTracks()]);
+    mime=['video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm','video/mp4'].find(t=>MediaRecorder.isTypeSupported(t))||'';
+    rec=new MediaRecorder(stream,mime?{mimeType:mime,videoBitsPerSecond:8e6}:{});
+    rec.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data)};
+    const stopped=new Promise(r=>{rec.onstop=r});
+    rec.start(500);
+    try{await vePlay(segs,rec)}finally{if(rec.state!=='inactive')rec.stop();await stopped}
+  }catch(e){veMsg('Kesme hatası: '+(e.message||e),true);if(a){try{a.src.disconnect();a.src.connect(a.ctx.destination)}catch{}}veSetBusy(false);return}
+  a.src.disconnect();a.src.connect(a.ctx.destination);veSetBusy(false);$('#ve-prog').style.width='0';
+  if(ve.cancel){veMsg('İptal edildi.');return}
+  const type=(rec.mimeType||mime||'video/webm').split(';')[0];
+  let blob=new Blob(chunks,{type});
+  if(blob.size&&type==='video/webm')blob=await veFixDuration(blob,segs.reduce((a,s)=>a+s[1]-s[0],0));
+  if(!blob.size){veMsg('Çıktı boş kaldı; tekrar dene.',true);return}
+  const ext=type.includes('mp4')?'mp4':'webm';
+  const base=(ve.file.name||'video').replace(/\.[^.]+$/,'');
+  const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=base+'-duzenlendi.'+ext;document.body.append(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(link.href),60000);
+  veMsg('Hazır: '+link.download+' ('+(blob.size/1048576).toFixed(1)+' MB) indirildi.');
+});
+/* MediaRecorder WebM çıktısında süre bilgisi olmaz; Info bölümüne Duration ekle */
+async function veFixDuration(blob,sec){
+  try{
+    const buf=new Uint8Array(await blob.slice(0,4096).arrayBuffer());
+    const rd=o=>{const b=buf[o];let l=1;while(l<=8&&!(b&(0x80>>(l-1))))l++;if(l>8)return null;const m=0xFF>>l;let v=b&m,unk=v===m;for(let i=1;i<l;i++){v=v*256+buf[o+i];if(buf[o+i]!==255)unk=false}return{l,v,unk}};
+    const id=o=>{const b=buf[o];let l=1;while(l<=4&&!(b&(0x80>>(l-1))))l++;let v=0;for(let i=0;i<l;i++)v=v*256+buf[o+i];return{l,v}};
+    let o=0;const h=id(0);if(h.v!==0x1A45DFA3)return blob;const hs=rd(h.l);o=h.l+hs.l+hs.v;
+    const sg=id(o);if(sg.v!==0x18538067)return blob;const ss=rd(o+sg.l);o+=sg.l+ss.l;
+    while(o<4000){
+      const e=id(o),s=rd(o+e.l);if(!s||s.unk)return blob;
+      if(e.v===0x1549A966){
+        const start=o+e.l+s.l,end=start+s.v;if(end>buf.length)return blob;
+        for(let q=start;q<end;){const c=id(q),cs=rd(q+c.l);if(c.v===0x4489)return blob;q+=c.l+cs.l+cs.v}
+        const ns=s.v+11;if(ns>=Math.pow(2,7*s.l)-1)return blob;
+        const sb=new Uint8Array(s.l);let t=ns;for(let i=s.l-1;i>=0;i--){sb[i]=t&255;t=Math.floor(t/256)}sb[0]|=(0x80>>(s.l-1));
+        const dur=new Uint8Array(11);dur[0]=0x44;dur[1]=0x89;dur[2]=0x88;new DataView(dur.buffer).setFloat64(3,sec*1000);
+        return new Blob([buf.slice(0,o+e.l),sb,buf.slice(start,end),dur,blob.slice(end)],{type:blob.type});
+      }
+      o+=e.l+s.l+s.v;
+    }
+  }catch{}
+  return blob;
+}
+/* Yapay zekâ modu: cihaz içi ses analizi */
+async function veAnalyze(){
+  if(ve.peaks)return ve.peaks;
+  if(!ve.file)throw new Error('Önce bir video seç.');
+  if(ve.file.size>80*1048576)throw new Error('Cihaz içi ses analizi en fazla 80 MB olabilir. Daha kısa/küçük video seç veya manuel modu kullan.');
+  if(ve.dur>180)throw new Error('Cihaz içi ses analizi en fazla 3 dakikalık videolar içindir. Daha kısa bir video seç veya manuel modu kullan.');
+  veMsg('Ses cihazında analiz ediliyor...');
+  const AC=window.AudioContext||window.webkitAudioContext,ctx=new AC();let ab;
+  try{ab=await ctx.decodeAudioData(await ve.file.arrayBuffer())}catch{throw new Error('Videonun sesi çözümlenemedi (ses yok veya biçim desteklenmiyor).')}finally{ctx.close()}
+  const ch=ab.getChannelData(0),win=Math.max(1,Math.floor(ab.sampleRate*0.05)),n=Math.floor(ch.length/win),rms=new Float32Array(n);
+  for(let i=0;i<n;i++){let sum=0;for(let j=i*win;j<(i+1)*win;j++)sum+=ch[j]*ch[j];rms[i]=Math.sqrt(sum/win)}
+  return ve.peaks={rms,step:0.05,dur:ab.duration};
+}
+function veSilenceSegs(sens){
+  const {rms,step,dur}=ve.peaks,sorted=Float32Array.from(rms).sort(),ref=sorted[Math.floor(sorted.length*0.95)]||0;
+  if(ref<1e-4)throw new Error('Videoda anlamlı ses bulunamadı.');
+  const thr=ref*sens,minSil=0.6,pad=0.12,runs=[];let start=-1;
+  for(let i=0;i<=rms.length;i++){const loud=i<rms.length&&rms[i]>thr;if(loud&&start<0)start=i;if(!loud&&start>=0){runs.push([start*step,i*step]);start=-1}}
+  const merged=[];runs.forEach(r=>{const l=merged[merged.length-1];if(l&&r[0]-l[1]<minSil)l[1]=r[1];else merged.push([...r])});
+  return merged.map(([s,e])=>[Math.max(0,s-pad),Math.min(dur,e+pad)]).filter(([s,e])=>e-s>=0.3);
+}
+function veHighlightSegs(target){
+  const {rms,step,dur}=ve.peaks,per=Math.round(1/step),secs=Math.ceil(dur),en=[];
+  for(let k=0;k<secs;k++){let sum=0,c=0;for(let i=k*per;i<Math.min(rms.length,(k+1)*per);i++){sum+=rms[i];c++}en.push({k,v:c?sum/c:0})}
+  const need=Math.max(1,Math.min(secs,Math.round(target))),pick=en.slice().sort((a,b)=>b.v-a.v).slice(0,need).map(x=>x.k).sort((a,b)=>a-b),out=[];
+  pick.forEach(k=>{const l=out[out.length-1];if(l&&k===l[1])l[1]=k+1;else out.push([k,k+1])});
+  return out.map(([s,e])=>[s,Math.min(dur,e)]);
+}
+function veParseDur(t){const m=t.match(/(\d+(?:[.,]\d+)?)\s*(saniye|sn|dakika|dk|s\b)?/);if(!m)return 0;let v=parseFloat(m[1].replace(',','.'));if(m[2]&&/^(dakika|dk)$/.test(m[2]))v*=60;return v}
+async function veAuto(kind,arg){
+  if(!ve.file){veMsg('Önce bir video seç.',true);return}
+  veSetBusy(true);
+  try{
+    let segs;
+    if(kind==='silence'){await veAnalyze();segs=veSilenceSegs(arg)}
+    else if(kind==='highlight'){await veAnalyze();segs=veHighlightSegs(arg)}
+    else segs=arg;
+    if(!segs.length)throw new Error('Bu işlemle tutulacak bölüm kalmadı. Hassasiyeti düşürmeyi dene.');
+    ve.segs=segs;veRenderSegs();
+    const tot=segs.reduce((a,s)=>a+s[1]-s[0],0);veMsg('Hazır: '+segs.length+' bölüm, toplam '+tot.toFixed(1)+' sn (orijinal '+veFmt(ve.dur).replace(/^00:/,'')+'). Önizle veya indir.');
+  }catch(e){veMsg(e.message||'İşlem başarısız.',true)}
+  veSetBusy(false);
+}
+$('#ve-ai-silence').addEventListener('click',()=>veAuto('silence',+$('#ve-sens').value));
+$('#ve-ai-highlight').addEventListener('click',()=>veAuto('highlight',Math.max(1,+$('#ve-target').value||30)));
+$('#ve-cmd-run').addEventListener('click',()=>{
+  const t=$('#ve-cmd').value.toLocaleLowerCase('tr').trim();if(!t){veMsg('Bir komut yaz.',true);return}
+  if(!ve.dur){veMsg('Önce bir video seç.',true);return}
+  const range=t.match(/(\d+(?:[.,]\d+)?)\s*(?:-|–|ile)\s*(\d+(?:[.,]\d+)?)/);
+  if(/sessiz|boşluk|duraksama/.test(t))return veAuto('silence',+$('#ve-sens').value);
+  if(/özet|highlight|en iyi|öne çıkan/.test(t)){const d=veParseDur(t);if(!d){veMsg('Kaç saniye? Örn: "20 saniyelik özet".',true);return}return veAuto('highlight',d)}
+  if(range&&/arası|arasını|kes|tut/.test(t)){const a=parseFloat(range[1].replace(',','.')),b=parseFloat(range[2].replace(',','.'));if(b>a)return veAuto('range',[[Math.max(0,a),Math.min(ve.dur,b)]])}
+  if(/\bilk\b/.test(t)){const d=veParseDur(t.replace(/.*\bilk\b/,''));if(d)return veAuto('range',[[0,Math.min(ve.dur,d)]])}
+  if(/\bson\b/.test(t)){const d=veParseDur(t.replace(/.*\bson\b/,''));if(d)return veAuto('range',[[Math.max(0,ve.dur-d),ve.dur]])}
+  veMsg('Bu komutu anlayamadım. Desteklenenler: sessiz kısımları at · N saniyelik özet · ilk N saniye · son N saniye · A-B arası.',true);
+});
+
 
 /* Veri temizleme */
 function doubleConfirm(btn,fn){let yes=false;btn.addEventListener('click',()=>{if(!yes){yes=true;const old=btn.textContent;btn.textContent='Emin misin? Tekrar tıkla';setTimeout(()=>{yes=false;btn.textContent=old},3000)}else{yes=false;fn()}})}doubleConfirm($('#clr-chat'),()=>{chat=[];saveChat();renderChat();toast('Sohbet silindi')});doubleConfirm($('#clr-hist'),()=>{jset('atolye.hist',[]);renderHist();toast('Prompt geçmişi silindi')});doubleConfirm($('#clr-all'),()=>{Object.keys(localStorage).filter(k=>k.startsWith('atolye.')).forEach(k=>localStorage.removeItem(k));location.reload()});
