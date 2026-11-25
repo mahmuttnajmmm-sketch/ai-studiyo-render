@@ -13,10 +13,26 @@ const json=(res,status,data,headers={})=>{res.writeHead(status,{'Content-Type':'
 async function readBody(req,maxBytes=1024*1024){let raw='',size=0;for await(const chunk of req){size+=chunk.length;if(size>maxBytes){const e=new Error('İstek çok büyük.');e.status=413;throw e;}raw+=chunk;}try{return JSON.parse(raw||'{}')}catch{return {}}}
 async function ai(body){
   const messages=Array.isArray(body.messages)?body.messages:[];
-  const r=await fetch(`${process.env.MANUS_API_URL}/v1/chat/completions`,{method:'POST',headers:{'Content-Type':'application/json','Authorization':`Bearer ${process.env.MANUS_API_KEY}`},body:JSON.stringify({messages})});
+  const apiKey=process.env.GEMINI_API_KEY;
+  if(!apiKey)throw Object.assign(new Error('Gemini API anahtarı Render ortamında ayarlı değil (GEMINI_API_KEY).'),{status:503,code:'missing_api_key'});
+  if(!messages.length)throw Object.assign(new Error('Mesaj boş olamaz.'),{status:400,code:'invalid_request'});
+  const contents=messages.filter(m=>m&&['user','assistant','model'].includes(m.role)).map(m=>({role:m.role==='assistant'?'model':m.role,parts:[{text:String(m.content??'')}]}));
+  if(!contents.length||contents.every(m=>m.role!=='user'))throw Object.assign(new Error('Kullanıcı mesajı bulunamadı.'),{status:400,code:'invalid_request'});
+  const generationConfig=body.json?{responseMimeType:'application/json'}:undefined;
+  const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent',{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},body:JSON.stringify({contents,...(generationConfig?{generationConfig}:{})})});
   const data=await r.json().catch(()=>({}));
-  if(!r.ok||data.error) throw new Error(data.error?.message||'AI servisi hata verdi.');
-  const text=data.choices?.[0]?.message?.content||'';
+  if(!r.ok||data.error){
+    const status=r.status||502;
+    let message='Gemini AI servisi yanıt vermedi.';
+    let code='upstream_error';
+    if(status===429){message='Gemini ücretsiz kullanım kotası doldu veya hız sınırına ulaşıldı. Bir süre sonra tekrar dene.';code='rate_limited';}
+    else if(status===400){message='Gemini isteği kabul etmedi: '+String(data.error?.message||'istek biçimini kontrol et.').slice(0,350);code='invalid_request';}
+    else if(status===401||status===403){message='Gemini API anahtarı geçersiz, kısıtlı veya bu proje için etkin değil. Google AI Studio anahtar/proje ayarlarını kontrol et.';code='invalid_api_key';}
+    else if(status===404){message='Gemini ücretsiz modeline erişilemiyor. Model kullanılabilirliğini ve AI Studio projesini kontrol et.';code='model_unavailable';}
+    throw Object.assign(new Error(message),{status,code});
+  }
+  const text=data.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';
+  if(!text)throw Object.assign(new Error('Gemini bu istek için metin yanıtı döndürmedi.'),{status:502,code:'empty_response'});
   if(body.json){let value;try{value=JSON.parse(text.replace(/^```json\s*|\s*```$/g,''));}catch{throw new Error('AI geçerli JSON döndürmedi.')}return {text,value};}
   return {text};
 }
@@ -53,7 +69,7 @@ const server=http.createServer(async(req,res)=>{
   }
   if(req.method==='POST'&&req.url==='/api/ai'){
     if(!isAuthed(req))return json(res,401,{error:'Önce uygulama şifresiyle giriş yapın.'});
-    try{return json(res,200,await ai(await readBody(req)))}catch(e){return json(res,500,{error:e.message});}
+    try{return json(res,200,await ai(await readBody(req)))}catch(e){return json(res,e.status||500,{error:e.message,code:e.code||'ai_error'});}
   }
   const requested=req.url.split('?')[0];let file=requested===adminPath?'/admin.html':(requested==='/'?'/index.html':requested);file=path.join(__dirname,'public',path.normalize(file));
   if(!file.startsWith(path.join(__dirname,'public'))){res.writeHead(403);return res.end('Forbidden');}
